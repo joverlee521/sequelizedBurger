@@ -1,0 +1,16 @@
+body{
+    background-color: #F4E600;
+}
+
+.burgers-list{
+    margin-top: 12rem;
+}
+
+.burger-item{
+    padding: .8rem .5rem;
+}
+
+.devour-button{
+    float: right;
+    font-size: .7rem;
+}
