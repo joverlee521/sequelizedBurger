@@ -1,8 +1,8 @@
-# Eat-Da-Burger
-A full-stack burger-logger created with MySQL, Node, Express, Handlebars, and a homemade ORM.
+# Eat-Da-Burger: The Sequel
+A full-stack burger-logger created with MySQL, Node, Express, Handlebars, and Sequelize.
 
 ## Deployment
-The application is deployed to Heroku: [https://jl-burgers.herokuapp.com](https://jl-burgers.herokuapp.com/)
+The application is deployed to Heroku: [https://jl-sequelizedburgers.herokuapp.com](https://jl-sequelizedburgers.herokuapp.com)
   * There may be a small delay when you first try to access the application due to the web dyno going to sleep if it receives no traffic for 30 minutes
 
 ## How To
@@ -16,4 +16,4 @@ The application is deployed to Heroku: [https://jl-burgers.herokuapp.com](https:
 * JavaScript, jQuery, Node.js
 * [Express](https://www.npmjs.com/package/express)
 * [Path](https://www.npmjs.com/package/path)
-* [MySQL](https://www.npmjs.com/package/mysql) and [JawsDB MySQL](https://elements.heroku.com/addons/jawsdb)
+* [Sequelize](https://www.npmjs.com/package/sequelize) and [JawsDB MySQL](https://elements.heroku.com/addons/jawsdb)
