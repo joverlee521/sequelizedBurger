@@ -3,7 +3,11 @@ var db = require("../models");
 var router = express.Router();
 
 router.get("/", function(req, res){
-    db.Burger.findAll({}).then(function(dbBurger){
+    db.Burger.findAll({
+        order: [
+            ["burger_name", "ASC"]
+        ]
+    }).then(function(dbBurger){
         var hbsObject = {
             burgers: dbBurger
         };
