@@ -1,7 +1,7 @@
 <li class="list-group-item burger-item">
-    {{burger_name}}
+    {{dataValues.burger_name}}
 
-    <button class="btn btn-outline-success devour-button" data-id="{{id}}" data-devour="{{devour}}">
+    <button class="btn btn-outline-success devour-button" data-id="{{dataValues.id}}" data-devour="{{devour}}">
         {{#if devour}}DEVOUR!{{else}}DIGEST!{{/if}}
     </button>
 </li>

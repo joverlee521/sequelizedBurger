@@ -15,6 +15,10 @@ app.set("view engine", "handlebars");
 var router = require("./controllers/burgers_controller");
 app.use(router);
 
-app.listen(PORT, function(){
-    console.log("Server is listening on: http://localhost:" + PORT);
+var db = require("./models");
+
+db.sequelize.sync().then(function(){
+    app.listen(PORT, function(){
+        console.log("Server is listening on: http://localhost:" + PORT);
+    });
 });

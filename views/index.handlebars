@@ -5,7 +5,7 @@
             <hr>
             <ul class="list-group">
                 {{#each burgers}}
-                    {{#unless devoured}}
+                    {{#unless dataValues.devoured}}
                         {{> burgers/burger-block devour=true}}
                     {{/unless}}
                 {{/each}}
@@ -28,7 +28,7 @@
             <hr>
             <ul class="list-group">
                 {{#each burgers}}
-                    {{#if devoured}}
+                    {{#if dataValues.devoured}}
                         {{> burgers/burger-block devour=false}}
                     {{/if}}
                 {{/each}}
