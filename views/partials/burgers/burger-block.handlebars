@@ -1,7 +1,12 @@
 <li class="list-group-item burger-item">
-    {{dataValues.burger_name}}
-
-    <button class="btn btn-outline-success devour-button" data-id="{{dataValues.id}}" data-devour="{{devour}}">
-        {{#if devour}}DEVOUR!{{else}}DIGEST!{{/if}}
-    </button>
+    <div class="row">
+        <div class="col-8">
+            <strong>{{dataValues.burger_name}}</strong> for {{Customer.name}}
+        </div>
+        <div class="col-4 align-self-center">
+            <button class="btn btn-danger complete-btn" data-id={{dataValues.id}} data-pending={{pending}}>
+                {{#if pending}}COMPLETE!{{else}}DELETE!{{/if}}
+            </button>
+        </div>
+    </div>
 </li>

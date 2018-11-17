@@ -4,10 +4,19 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             allowNull: false
         },
-        devoured: {
+        completed: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         }
     });
+
+    Burger.associate = function(models){
+        Burger.belongsTo(models.Customer, {
+            foreignKey: {
+                allowNull: false,
+            }
+        });
+    };
+
     return Burger;
 }

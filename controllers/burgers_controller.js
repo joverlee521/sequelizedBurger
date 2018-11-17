@@ -6,7 +6,8 @@ router.get("/", function(req, res){
     db.Burger.findAll({
         order: [
             ["burger_name", "ASC"]
-        ]
+        ], 
+        include: [db.Customer]
     }).then(function(dbBurger){
         var hbsObject = {
             burgers: dbBurger
@@ -17,7 +18,8 @@ router.get("/", function(req, res){
 
 router.post("/api/burgers", function(req,res){
     db.Burger.create({
-        burger_name: req.body.burger_name
+        burger_name: req.body.burger_name,
+        CustomerId: req.body.CustomerId
     }).then(function(dbBurger){
         res.json(dbBurger.dataValues);
     });
@@ -25,7 +27,7 @@ router.post("/api/burgers", function(req,res){
 
 router.put("/api/burgers/:id", function(req, res){
     db.Burger.update({
-        devoured: req.body.devoured
+        completed: req.body.completed
     }, {
         where: {
             id: req.params.id
@@ -48,6 +50,21 @@ router.delete("/api/burgers/:id", function(req, res){
             return res.status(404).end();
         }
         return res.status(200).end();
+    });
+});
+
+router.post("/api/customers", function(req, res){
+    db.Customer.findOrCreate({
+        where: {
+            name: req.body.name
+        }
+    }).spread(function(dbCustomer, created){
+        if(created){
+            console.log("New Customer Created!");
+        }else{
+            console.log("Existing Customer");
+        }
+        res.json(dbCustomer.dataValues);
     });
 });
 

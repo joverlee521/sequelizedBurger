@@ -2,6 +2,10 @@ body{
     background-color: #F4E600;
 }
 
+li{
+    background-color: transparent !important;
+}
+
 .burgers-list{
     margin-top: 12rem;
 }
@@ -10,7 +14,14 @@ body{
     padding: .8rem .5rem;
 }
 
-.devour-button{
-    float: right;
+.complete-btn{
     font-size: .7rem;
+}
+
+#pending-orders{
+    background-color: white;
+}
+
+#completed-orders{
+    background-color: gray;
 }
