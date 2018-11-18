@@ -1,15 +1,16 @@
 # Eat-Da-Burger: The Sequel
-A full-stack burger-logger created with MySQL, Node, Express, Handlebars, and Sequelize.
+A full-stack burger order logger created with MySQL, Node, Express, Handlebars, and Sequelize.
 
 ## Deployment
 The application is deployed to Heroku: [https://jl-sequelizedburgers.herokuapp.com](https://jl-sequelizedburgers.herokuapp.com)
   * There may be a small delay when you first try to access the application due to the web dyno going to sleep if it receives no traffic for 30 minutes
 
 ## How To
-1. Enter the name of the burger you would like to add and click "Submit"
-1. The new burger will be added to the list of "Available Burgers"
-1. Click the "Devour!" button to move a burger to the "Devoured Burgers" list
-1. Click the "Digest!" button to delete the burger from list
+1. Enter the name of the burger and customer name then click "Submit"
+1. The new burger with associated customer will be added to the list of "Pending Orders"
+   * Burgers are ordered by customer then by alphabetical order
+1. Click the "Complete!" button to move an order to the "Completed Orders" list
+1. Click the "Delete!" button to delete the order from list
 
 ## Technologies Used
 * HTML, CSS, Bootstrap, and Handlebars
