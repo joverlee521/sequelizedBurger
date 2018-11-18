@@ -1,5 +1,6 @@
 <div class="container">
     <div class="row">
+        {{!-- List of Pending Orders --}}
         <div class="col-4 burgers-list">
             <h5 class="text-center">Pending Orders</h5>
             <hr>
@@ -12,9 +13,12 @@
             </ul>
         </div>
         <div class="col-4 text-center mt-5">
+            {{!-- Title of the Page --}}
             <h1 class="display-4"><strong>Eat-Da-Burger</strong> Orders</h1>
+            {{!-- Burger Image --}}
             <img src="/assets/img/burgerIcon.png" class="img-fluid" alt="burger icon">
             <h2 class="mt-5">Add A Burger Order!</h2>
+            {{!-- Order Form --}}
             <form id="order-form">
                 <div class="form-group">
                     <input type="text" class="form-control" id="burger-input" placeholder="Burger">
@@ -25,6 +29,7 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
+        {{!-- List of Complete Orders --}}
         <div class="col-4 burgers-list">
             <h5 class="text-center">Completed Orders</h5>
             <hr>

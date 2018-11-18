@@ -1,9 +1,11 @@
+{{!-- Each burger display shows burger name, customer name, and a button --}}
 <li class="list-group-item burger-item">
     <div class="row">
         <div class="col-8">
             <strong>{{dataValues.burger_name}}</strong> for {{Customer.name}}
         </div>
         <div class="col-4 align-self-center">
+            {{!-- Button's text depends on the pending state --}}
             <button class="btn btn-danger complete-btn" data-id={{dataValues.id}} data-pending={{pending}}>
                 {{#if pending}}COMPLETE!{{else}}DELETE!{{/if}}
             </button>
