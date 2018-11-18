@@ -7,8 +7,9 @@ var router = express.Router();
 router.get("/", function(req, res){
     // Using sequelize findAll method
     db.Burger.findAll({
-        // Return data in alphabetical order
+        // Return data in ascending order of customerId and alphabetical order
         order: [
+            ["CustomerId", "ASC"],
             ["burger_name", "ASC"]
         ], 
         // Include associated Customer data
