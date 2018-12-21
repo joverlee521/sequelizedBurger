@@ -12,6 +12,8 @@ The application is deployed to Heroku: [https://jl-sequelizedburgers.herokuapp.c
 1. Click the "Complete!" button to move an order to the "Completed Orders" list
 1. Click the "Delete!" button to delete the order from list
 
+![Eat-Da-Burger](/public/assets/img/burger-page.png)
+
 ## Technologies Used
 * HTML, CSS, Bootstrap, and Handlebars
 * JavaScript, jQuery, Node.js
